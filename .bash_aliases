@@ -31,6 +31,7 @@ alias gitc="git commit"
 alias gitb="git branch"
 alias gita="git add"
 alias gitcc="git checkout"
+alias gitd="git diff"
 
 if [ -f ~/.bash_tmp_aliases ]; then
     . ~/.bash_tmp_aliases

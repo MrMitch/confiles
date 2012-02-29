@@ -1,0 +1,19 @@
+[user]
+	name = Mickael GOETZ
+	email = contact@mickael-goetz.com
+[color]
+	branch = auto
+	status = auto
+	diff = auto
+	ui = auto
+[core]
+	editor = vim
+[github]
+	user = MrMitch
+	token = LOL YOU ACTUALLY THOUGHT I WOULD LEAVE THIS HERE? U MAD? 
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 485x98+49+47
+	main-window-view = HistoryView
+	history-view-vpane-position = 498
+	file-view-vpane-position = 732
