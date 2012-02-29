@@ -1,0 +1,3 @@
+alias odbc="~/Applications/orientdb/bin/ && ./console.sh"
+alias odbs="~/Applications/orientdb/bin/orientdb.sh"
+alias azerty="ssh mitch@10.3.236.118"
