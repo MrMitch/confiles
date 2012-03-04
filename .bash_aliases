@@ -32,7 +32,8 @@ alias gitb="git branch"
 alias gita="git add"
 alias gitcc="git checkout"
 alias gitd="git diff"
-
+alias upd="sudo apt-get update"
+alias upg="sudo apt-get upgrade"
 if [ -f ~/.bash_tmp_aliases ]; then
     . ~/.bash_tmp_aliases
 fi
