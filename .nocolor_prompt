@@ -1,0 +1,22 @@
+WD=`pwd`
+WD_SIZE=${#WD}
+
+PS1='┌'
+
+# separators
+for((i=${#PS1}; i< ($COLUMNS/2 - WD_SIZE/2 -2) ; i++)) do
+	PS1=$PS1'―'	
+done
+
+# working dir
+PS1=$PS1' '$WD' '
+
+# separators again
+for((i=${#PS1}; i< ($COLUMNS - 8 - 1); i++)) do
+	PS1=$PS1'―'	
+done
+
+PS1=$PS1" \t\n└ \u@\h "
+
+# clear vars
+unset WD WD_SIZE
