@@ -2,6 +2,17 @@
 s0_outline_color = #00042a9f
 s0_fill_color = #0008564f
 
+[winrules]
+s0_skiptaskbar_match = class=Conky
+s0_skippager_match = class=Conky
+s0_sticky_match = class=Conky
+s0_no_move_match = class=Conky
+s0_no_resize_match = class=Conky
+s0_no_minimize_match = class=Conky
+s0_no_maximize_match = class=Conky
+s0_no_close_match = class=Conky
+s0_no_focus_match = class=Conky
+
 [expo]
 s0_expo_edge = TopLeft
 s0_x_offset = 2
@@ -25,7 +36,7 @@ s0_initiate_key = Disabled
 s0_initiate_all_edge = TopRight
 
 [core]
-s0_active_plugins = core;bailer;detection;composite;opengl;compiztoolbox;decor;gnomecompat;vpswitch;staticswitcher;place;grid;regex;move;session;imgpng;mousepoll;resize;snap;wall;animation;fade;expo;workarounds;scale;
+s0_active_plugins = core;bailer;detection;composite;opengl;compiztoolbox;decor;gnomecompat;vpswitch;staticswitcher;place;grid;regex;winrules;move;session;imgpng;mousepoll;resize;snap;wall;animation;fade;expo;workarounds;scale;
 s0_hsize = 3
 s0_vsize = 3
 
