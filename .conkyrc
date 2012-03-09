@@ -1,193 +1,99 @@
-background yes
-
-cpu_avg_samples 1
-net_avg_samples 1
-
-out_to_console no
-
-# Use Xft?
+# Default Font
 use_xft yes
-
-# Xft font when Xft is enabled
-xftfont Monospaced:size=8
-
-own_window_transparent yes
-own_window_colour hotpink
-
-# Text alpha when using Xft
-xftalpha 1
-
-# mail spool
-mail_spool $MAIL
-
-# Update interval in seconds
+xftfont Monospace:size=9
+# Performance Settings
 update_interval 1
-# Create own window instead of using desktop (required in nautilus)
-own_window no
-
-# Use double buffering (reduces flicker, may not work for everyone)
-double_buffer yes
-
-# Minimum size of text area
-#minimum_size 280 5
-maximum_width 250
-
-# Draw shades?
-draw_shades no
-
-# Draw outlines?
-draw_outline no
-
-# Draw borders around text
-draw_borders no
-
-# Stippled borders?
-stippled_borders 10
-
-# border margins
-border_inner_margin 4
-
-# border width
-border_width 1
-
-# Default colors and also border colors
-default_color white
-default_shade_color white
-default_outline_color white
-default_border_color white
-
-# Text alignment, other possible values are commented
-#alignment top_left
-#minimum_size 10 10
-gap_x 13
-gap_y 34
-alignment top_right
-#alignment bottom_left
-#alignment bottom_right
-
-# Add spaces to keep things from moving about?  This only affects certain objects.
-use_spacer none 
-
-# Subtract file system buffers from used memory?
+total_run_times 0
 no_buffers yes
-
-# set to yes if you want all text to be in uppercase
-uppercase no
-
-# boinc (seti) dir
-# seti_dir /opt/seti
-
-# Possible variables to be used:
-#
-#      Variable         Arguments                  Description                
-#  acpiacadapter                     ACPI ac adapter state.                   
-#  acpifan                           ACPI fan state                           
-#  acpitemp                          ACPI temperature.                        
-#  adt746xcpu                        CPU temperature from therm_adt746x       
-#  adt746xfan                        Fan speed from therm_adt746x             
-#  battery           (num)           Remaining capasity in ACPI or APM        
-#                                    battery. ACPI battery number can be      
-#                                    given as argument (default is BAT0).     
-#  buffers                           Amount of memory buffered                
-#  cached                            Amount of memory cached                  
-#  color             (color)         Change drawing color to color            
-#  cpu                               CPU usage in percents                    
-#  cpubar            (height)        Bar that shows CPU usage, height is      
-#                                    bar's height in pixels                   
-#  downspeed         net             Download speed in kilobytes              
-#  downspeedf        net             Download speed in kilobytes with one     
-#                                    decimal                                  
-#  exec              shell command   Executes a shell command and displays    
-#                                    the output in torsmo. warning: this      
-#                                    takes a lot more resources than other    
-#                                    variables. I'd recommend coding wanted   
-#                                    behaviour in C and posting a patch :-).  
-#  execi             interval, shell Same as exec but with specific interval. 
-#                    command         Interval can't be less than              
-#                                    update_interval in configuration.        
-#  fs_bar            (height), (fs)  Bar that shows how much space is used on 
-#                                    a file system. height is the height in   
-#                                    pixels. fs is any file on that file      
-#                                    system.                                  
-#  fs_free           (fs)            Free space on a file system available    
-#                                    for users.                               
-#  fs_free_perc      (fs)            Free percentage of space on a file       
-#                                    system available for users.              
-#  fs_size           (fs)            File system size                         
-#  fs_used           (fs)            File system used space                   
-#  hr                (height)        Horizontal line, height is the height in 
-#                                    pixels                                   
-#  i2c               (dev), type, n  I2C sensor from sysfs (Linux 2.6). dev   
-#                                    may be omitted if you have only one I2C  
-#                                    device. type is either in (or vol)       
-#                                    meaning voltage, fan meaning fan or temp 
-#                                    meaning temperature. n is number of the  
-#                                    sensor. See /sys/bus/i2c/devices/ on     
-#                                    your local computer.                     
-#  kernel                            Kernel version                           
-#  loadavg           (1), (2), (3)   System load average, 1 is for past 1     
-#                                    minute, 2 for past 5 minutes and 3 for   
-#                                    past 15 minutes.                         
-#  machine                           Machine, i686 for example                
-#  mails                             Mail count in mail spool. You can use    
-#                                    program like fetchmail to get mails from 
-#                                    some server using your favourite         
-#                                    protocol. See also new_mails.            
-#  mem                               Amount of memory in use                  
-#  membar            (height)        Bar that shows amount of memory in use   
-#  memmax                            Total amount of memory                   
-#  memperc                           Percentage of memory in use              
-#  new_mails                         Unread mail count in mail spool.         
-#  nodename                          Hostname                                 
-#  outlinecolor      (color)         Change outline color                     
-#  pre_exec          shell command   Executes a shell command one time before 
-#                                    torsmo displays anything and puts output 
-#                                    as text.                                 
-#  processes                         Total processes (sleeping and running)   
-#  running_processes                 Running processes (not sleeping),        
-#                                    requires Linux 2.6                       
-#  shadecolor        (color)         Change shading color                     
-#  stippled_hr       (space),        Stippled (dashed) horizontal line        
-#                    (height)                     
-#  sysname                           System name, Linux for example           
-#  time              (format)        Local time, see man strftime to get more 
-#                                    information about format                 
-#  totaldown         net             Total download, overflows at 4 GB on     
-#                                    Linux with 32-bit arch and there doesn't 
-#                                    seem to be a way to know how many times  
-#                                    it has already done that before torsmo   
-#                                    has started.                             
-#  totalup           net             Total upload, this one too, may overflow 
-#  updates                           Number of updates (for debugging)        
-#  upspeed           net             Upload speed in kilobytes                
-#  upspeedf          net             Upload speed in kilobytes with one       
-#                                    decimal                                  
-
-#  uptime                            Uptime                                   
-#  uptime_short                      Uptime shorter 
-
-
-# variable is given either in format $variable or in ${variable}. Latter
-# allows characters right after the variable and must be used in network
-# stuff because of an argument
-#${font Dungeon:style=Bold:pixelsize=10}I can change the font as well
-#${font Verdana:size=10}as many times as I choose
-#${font Perry:size=10}Including UTF-8,
-#${font Luxi Mono:size=10}justo como este texto que o google traduz fÃªz o portuguÃªs
-# stuff after 'TEXT' will be formatted on screen
-#${font Grunge:size=12}${time %a  %b  %d}${alignr -25}${time %k:%M}
+cpu_avg_samples 2
+net_avg_samples 2
+text_buffer_size 1024
+if_up_strictness address
+# Window Settings
+own_window yes
+own_window_type normal 
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_argb_value 0 
+double_buffer yes
+draw_borders no
+draw_shades no
+# Default Color
+default_color AAAAAA
+# Size and position
+minimum_size 220 745
+gap_x 10
+gap_y 35
+alignment top_right
+# Eyecandy
+format_human_readable yes
+short_units yes
+use_spacer right
+# Templates
+template0 ${GOTO 110}			# horizontal alignement
+template1 15,277			# disk bars size 
+template2 15,173			# graphs size
+template3 ${GOTO 90}			# weather info alignement
+template4 ${voffset -5}${template0}	# graphs alignement
+template5 ${font Ubuntu:size=12}\1    ${voffset -2}${color 666666}${hr}${color}${font}	# title
+template6 ${GOTO 80}\1  ${voffset -2}${color 666666}${hr}${color}			# subtitle
+template7 \1: ${template 0}${fs_free \2} (${fs_free_perc \2} %)	# disk info
+template8 ${fs_bar ${template 1} \1}				# disk bar
+template9 ${execi 900 /home/mickael/.conkyweather/weather.sh "Strasbourg,France" \1}	# weather infos
 
 TEXT
-Uptime:$color $uptime_short
+${template5 System}
 
-CPU: ${cpu}% ${cpubar}
-${cpugraph 000000 5000a0}
-RAM: ${memperc}% ${membar}
-${memgraph 000000 5000a0}
+${template6 Perfs}
 
-Network:
-Down ▼ : ${downspeed eth0} k/s $alignr Up ▲ : ${upspeed eth0} k/s
-${downspeedgraph eth0 24,125 ff0000 ACACAC} $alignr${upspeedgraph eth0 24,125 0000ff ACACAC}
-File systems:
-(sda6) / : ${fs_free /} ${offset 40}${fs_bar /}
-(sda7) /home: ${fs_free /home} ${offset 9} ${fs_bar /home}
+Uptime: ${template0}${uptime_short}
+Load average: ${template0}${loadavg 1} - ${loadavg 2} - ${loadavg 3}
+
+CPU: ${cpu cpu0}% ${template4}${cpugraph cpu0 ${template2}}
+
+RAM: ${mem} ${template4}${memgraph ${template2}}
+
+
+${template6 Disks}
+
+${template7 System /}
+${template8 /}
+
+${template7 Home /home}
+${template8 /home}
+
+
+
+${template5 Internet}
+
+${if_up wlan0}ESSID: ${template0}${wireless_essid wlan0} 
+Signal: ${template0}${wireless_link_qual wlan0}%
+Local IP:${template0}${addr wlan0}
+Public IP:${template0}${execi 18000 wget http://checkip.dyndns.org/ -q -O - | grep -Eo '\<[[:digit:]]{1,3}(\.[[:digit:]]{1,3}){3}\>'}
+
+Down : ${downspeed wlan0} ${template4}${downspeedgraph wlan0 ${template2} B7B2AD B7B2AD}
+
+Up : ${upspeed wlan0} ${template4}${upspeedgraph wlan0 ${template2} B7B2AD B7B2AD}$endif${if_up eht0}
+Local IP:${template0}${addr eth0}
+Public IP:${template0}${execi 18000 wget http://checkip.dyndns.org/ -q -O - | grep -Eo '\<[[:digit:]]{1,3}(\.[[:digit:]]{1,3}){3}\>'}
+
+Down : ${downspeed wlan0} ${template4}${downspeedgraph eth0 ${template2} B7B2AD B7B2AD}
+
+Up : ${upspeed wlan0} ${template4}${upspeedgraph eth0 ${template2} B7B2AD B7B2AD}$endif
+
+
+
+${template5 Weather} 
+
+${template6 Live}
+
+${voffset -10}${font conkyweather:size=60}${template9 s}
+${voffset -125}${template4}${font DejaVu Sans Mono:size=15}${template9 t-m}
+${template4}${template9 c}
+${template4}${template9 h}${font}
+
+
+${template6 Forecast}
+
+${font conkyweather:size=38}${template9 fcsl}${font}
+ ${template9 fctl-m}
