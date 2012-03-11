@@ -1,3 +1,13 @@
+[wall]
+s0_preview_timeout = 0.300000
+s0_preview_scale = 200
+s0_edge_radius = 7
+s0_border_width = 10
+s0_left_window_key = <Alt>Left
+s0_right_window_key = <Alt>Right
+s0_up_window_key = <Alt>Up
+s0_down_window_key = <Alt>Down
+
 [grid]
 s0_outline_color = #00042a9f
 s0_fill_color = #0008564f
@@ -37,6 +47,7 @@ s0_initiate_all_edge = TopRight
 
 [core]
 s0_active_plugins = core;bailer;detection;composite;opengl;compiztoolbox;decor;gnomecompat;vpswitch;staticswitcher;place;grid;regex;winrules;move;session;imgpng;mousepoll;resize;snap;wall;animation;fade;expo;workarounds;scale;
+s0_show_desktop_key = <Super>d
 s0_hsize = 3
 s0_vsize = 3
 
@@ -45,6 +56,7 @@ s0_command_terminal = xfce4-terminal
 
 [staticswitcher]
 s0_popup_delay = 0.000000
+s0_row_align = 2
 
 [place]
 s0_position_matches = (role=buddy_list) & class=Pidgin;

@@ -2,6 +2,7 @@
 use_xft yes
 xftfont Ubuntu Mono:size=10
 # Performance Settings
+background yes
 update_interval 1
 total_run_times 0
 no_buffers yes
@@ -24,7 +25,7 @@ default_color AAAAAA
 # Size and position
 minimum_size 220 745
 gap_x 10
-gap_y 35
+gap_y 45
 alignment top_right
 # Eyecandy
 format_human_readable yes
