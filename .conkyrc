@@ -75,13 +75,13 @@ ${template5 Internet}
 ${if_up wlan0}ESSID: ${template0}${wireless_essid wlan0} 
 Signal: ${template0}${wireless_link_qual wlan0}%
 Local IP:${template0}${addr wlan0}
-Public IP:${template0}${execi 18000 wget http://checkip.dyndns.org/ -q -O - | grep -Eo '\<[[:digit:]]{1,3}(\.[[:digit:]]{1,3}){3}\>'}
+Public IP:${template0}${pre_exec wget http://checkip.dyndns.org/ -q -O - | grep -Eo '\<[[:digit:]]{1,3}(\.[[:digit:]]{1,3}){3}\>'}
 
 Down : ${downspeed wlan0} ${template4}${downspeedgraph wlan0 ${template2} -l}
 
 Up : ${upspeed wlan0} ${template4}${upspeedgraph wlan0 ${template2} -l}$else${if_up eht0}
 Local IP:${template0}${addr eth0}
-Public IP:${template0}${execi 18000 wget http://checkip.dyndns.org/ -q -O - | grep -Eo '\<[[:digit:]]{1,3}(\.[[:digit:]]{1,3}){3}\>'}
+Public IP:${template0}${pre_exec wget http://checkip.dyndns.org/ -q -O - | grep -Eo '\<[[:digit:]]{1,3}(\.[[:digit:]]{1,3}){3}\>'}
 
 Down : ${downspeed wlan0} ${template4}${downspeedgraph eth0 ${template2} -l}
 
