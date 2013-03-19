@@ -4,8 +4,8 @@ WD_SIZE=${#WD}
 PS1="\[\033[G\]\[\e[0;37m\]┌"
 
 # separators
-for((i=${#PS1}-11; i< ($COLUMNS/2 - WD_SIZE/2 -2 + 10) ; i++)) do
-	PS1=$PS1'―'	
+for((i=${#PS1}-11; i< ($COLUMNS/2 - $WD_SIZE/2 -2 + 10) ; i++)) do
+	PS1=$PS1'─'	
 done
 
 # working dir
@@ -13,10 +13,10 @@ PS1=$PS1'\[\e[1;35m\] '$WD' \[\e[0;37m\]'
 
 # separators again
 for((i=${#PS1}-36; i< ($COLUMNS -8 + 10  - 1); i++)) do
-	PS1=$PS1'―'	
+	PS1=$PS1'─'	
 done
 
-PS1=$PS1" \t\n└ \[\e[0;32m\]\u\[\e[0m\]@\[\e[1;34m\]\h \[\e[0m\]"
+PS1=$PS1" \t\n\[\e[0;37m\]└ \[\e[0;32m\]\u\[\e[0m\]@\[\e[1;34m\]\h \[\e[0m\]"
 
 # clear vars
 unset WD WD_SIZE

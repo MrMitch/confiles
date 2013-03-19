@@ -1,10 +1,10 @@
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    alias ls='ls --color=always'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
-
+    alias less='less -R'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -37,6 +37,8 @@ alias gitl="git log"
 alias gitw="git whatchanged"
 alias upd="sudo apt-get update"
 alias upg="sudo apt-get upgrade"
+alias serve="python -m SimpleHTTPServer"
+alias pi="ssh pi@xbmc"
 if [ -f ~/.bash_tmp_aliases ]; then
     . ~/.bash_tmp_aliases
 fi
