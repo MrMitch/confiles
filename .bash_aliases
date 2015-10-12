@@ -23,9 +23,8 @@ alias l='ls -CF'
 alias apa="sudo service apache2 start"
 alias apas="sudo service apache2 stop"
 alias apar="sudo service apache2 restart"
-alias 42f="cd ~/www/42framework && git status"
-alias 42F="42f"
-alias hub="cd ~/www/hubvioos/ && git status"
+
+# git aliases
 alias gits="git status"
 alias gitc="git commit"
 alias gitb="git branch"
