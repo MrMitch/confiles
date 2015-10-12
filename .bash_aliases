@@ -53,3 +53,5 @@ alias phpstorm="`grep Exec ~/.local/share/applications/jetbrains-phpstorm.deskto
 if [ -f ~/.bash_tmp_aliases ]; then
     . ~/.bash_tmp_aliases
 fi
+
+eval "$(thefuck --alias)"
