@@ -40,7 +40,16 @@ alias gl="git log --oneline --all --graph --decorate  $*"
 alias upd="sudo apt-get update"
 alias upg="sudo apt-get upgrade"
 alias serve="python -m SimpleHTTPServer"
-alias pi="ssh pi@xbmc"
+
+alias symass="php app/console asset:install --symlink"
+alias symrun="php app/console server:run"
+alias symdbu="php app/console doctrine:schema:update --force"
+alias symgen="php app/console doctrine:generate:entity" 
+alias symgens="php app/console doctrine:generate:entities"
+alias symacl="sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX app/cache app/logs && sudo setfacl -dR -m u:www-data:rwX -m u:`whoami`:rwX app/cache app/logs"
+
+alias phpstorm="`grep Exec ~/.local/share/applications/jetbrains-phpstorm.desktop | cut -d'\"' -f2`"
+
 if [ -f ~/.bash_tmp_aliases ]; then
     . ~/.bash_tmp_aliases
 fi
