@@ -107,3 +107,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Hook for desk activation
+[ ! -z "$DESK_ENV" ] && source "$DESK_ENV"
+source /home/mitch/bin/desk-src/shell_plugins/bash/desk
