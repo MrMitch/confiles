@@ -50,7 +50,7 @@ alias symgens="php app/console doctrine:generate:entities"
 alias symacl="sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX app/cache app/logs && sudo setfacl -dR -m u:www-data:rwX -m u:`whoami`:rwX app/cache app/logs"
 
 alias phpstorm="`grep Exec ~/.local/share/applications/jetbrains-phpstorm.desktop | cut -d'\"' -f2`"
-
+alias e.='nautilus `pwd` &> /dev/null'
 if [ -f ~/.bash_tmp_aliases ]; then
     . ~/.bash_tmp_aliases
 fi
