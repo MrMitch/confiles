@@ -58,9 +58,6 @@ fi
 
 ## git prompt
 . /usr/lib/git-core/git-sh-prompt # ~/git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='\w$(__git_ps1 " (%s)")\$ '
-
 
 if [ "$color_prompt" = yes ]; then
   PROMPT_COMMAND='. ~/.color_prompt'
