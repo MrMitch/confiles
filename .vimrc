@@ -1,5 +1,7 @@
 set number
 syntax on
-set cursorline
 set mouse=a
 set ruler
+set cursorline
+set modeline
+set modelines=1
