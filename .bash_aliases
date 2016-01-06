@@ -25,11 +25,10 @@ alias apas="sudo service apache2 stop"
 alias apar="sudo service apache2 restart"
 alias disx="sudo sh -c 'php5dismod xdebug && service apache2 reload'"
 alias enx="sudo sh -c 'php5enmod xdebug && service apache2 reload'"
-
 # git aliases
 alias gits="git status"
 alias gitc="git commit"
-alias gitb="git branch"
+alias gitb="git branch -vv"
 alias gita="git add"
 alias gitcc="git checkout"
 alias gitd="git diff"
