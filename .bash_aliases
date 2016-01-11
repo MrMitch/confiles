@@ -20,11 +20,6 @@ alias la='ls -Ah'
 alias l='ls -CF'
 
 # User defined aliases
-alias apa="sudo service apache2 start"
-alias apas="sudo service apache2 stop"
-alias apar="sudo service apache2 restart"
-alias disx="sudo sh -c 'php5dismod xdebug && service apache2 reload'"
-alias enx="sudo sh -c 'php5enmod xdebug && service apache2 reload'"
 # git aliases
 alias gits="git status"
 alias gitc="git commit"
