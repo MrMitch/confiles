@@ -28,6 +28,11 @@ pre_git=$pre_git" \t\n\[\e[0;37m\]└ \[\e[0;32m\]\u\[\e[0m\]@\[\e[1;34m\]\h "
 if [ ! -z $DESK_NAME ]
 then
 	pre_git=$pre_git"\[\e[0;90m\]{"$DESK_NAME"}\[\e[1;34m\]"
+
+	if [ ! -d .git ]
+	then
+		pre_git=$pre_git" "
+	fi
 fi
 
 
