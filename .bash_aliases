@@ -37,17 +37,19 @@ alias upd="sudo apt-get update"
 alias upg="sudo apt-get upgrade"
 alias serve="python -m SimpleHTTPServer"
 
-alias symass="php app/console asset:install --symlink"
-alias symrun="php app/console server:run"
-alias symdbu="php app/console doctrine:schema:update --force"
-alias symgen="php app/console doctrine:generate:entity" 
-alias symgens="php app/console doctrine:generate:entities"
-alias symacl="sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX app/cache app/logs && sudo setfacl -dR -m u:www-data:rwX -m u:`whoami`:rwX app/cache app/logs"
+symc() { `test -x app/console && echo -n 'app' || echo -n 'bin'`/console "$@"; }
 
-alias phpstorm="`grep Exec ~/.local/share/applications/jetbrains-phpstorm.desktop | cut -d'\"' -f2`"
+alias symass="symc asset:install --symlink"
+alias symrun="symc server:run"
+alias symdbu="symc doctrine:schema:update --force"
+alias symdbd="symc doctrine:schema:drop --force"
+alias symdbreset="symdbd && symdbu"
+alias symgen="symc doctrine:generate:entity"
+alias symgens="symc doctrine:generate:entities"
+alias symacl="sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX var && sudo setfacl -dR -m u:www-data:rwX -m u:`whoami`:rwX var"
+
+#alias phpstorm="`grep Exec ~/.local/share/applications/jetbrains-phpstorm.desktop | cut -d'\"' -f2`"
 alias e.='nautilus `pwd` &> /dev/null'
 if [ -f ~/.bash_tmp_aliases ]; then
     . ~/.bash_tmp_aliases
 fi
-
-eval "$(thefuck --alias)"
