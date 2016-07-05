@@ -6,38 +6,30 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 WD=`pwd`
 WD_SIZE=${#WD}
 
-pre_git="\[\033[G\]\[\e[0;37m\]┌"
+# username:working-directory
+pre_git="\[\033[G\]\[\e[0;32m\]\u\[\e[0m\]:\[\e[1;34m\]$WD \[\e[0;37m\]"
 
-# separators, uncomment to have the working directory in the center of the terminal
-#for((i=${#pre_git}-11; i< ($COLUMNS/2 - $WD_SIZE/2 -2 + 10) ; i++)) do
-#	pre_git=$pre_git'─'
-#done
-
-# working dir
-pre_git=$pre_git'\[\e[1;35m\] '$WD' \[\e[0;37m\]'
-
-# separators again
-for((i=${#pre_git}-36; i< ($COLUMNS -8 + 10  - 1); i++)) do
-	pre_git=$pre_git'─'	
+# separators
+for((i=${#pre_git}-42; i< ($COLUMNS -8 + 10  - 1); i++)) do
+	pre_git="$pre_git─"
 done
 
-# username@host
-pre_git=$pre_git" \t\n\[\e[0;37m\]└ \[\e[0;32m\]\u\[\e[0m\]@\[\e[1;34m\]\h "
+pre_git="$pre_git \t\n\[\e[0;37m\]"
 
 # desk name 
 if [ ! -z $DESK_NAME ]
 then
-	pre_git=$pre_git"\[\e[0;90m\]{"$DESK_NAME"}\[\e[1;34m\]"
+	pre_git=$pre_git"\[\e[38;5;247m\]{"$DESK_NAME"}\[\e[0;39m\]"
 
 	if [ ! -d .git ]
 	then
-		pre_git=$pre_git" "
+		pre_git="$pre_git "
 	fi
 fi
 
 
-post_git="\[\e[0m\]" 
-git_format="\[\e[0;90m\][\[\e[0m\]%s\[\e[0;90m\]] "
+post_git="\[\e[0m\]▸ "
+git_format="\[\e[38;5;247m\][\[\e[0m\]%s\[\e[38;5;247m\]] "
 
 __git_ps1 "$pre_git" "$post_git" "$git_format" 
  
