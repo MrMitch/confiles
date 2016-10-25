@@ -1,0 +1,20 @@
+{
+	"color_scheme": "Packages/Theme - Alpenglow/Alpenglow.tmTheme",
+	"font_face": "Fira Code",
+	"font_size": 19,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"open_files_in_new_window": false,
+	"remember_full_screen": true,
+	"show_encoding": true,
+	"sidebar_size_14": true,
+	"status_bar_brighter": true,
+	"tabs_medium": true,
+	"tabs_padding_medium": true,
+	"theme": "Alpenglow.sublime-theme",
+	"use_simple_full_screen": true,
+	"word_wrap": true
+}
