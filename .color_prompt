@@ -7,10 +7,10 @@ WD=`pwd`
 WD_SIZE=${#WD}
 
 # username:working-directory
-pre_git="\[\033[G\]\[\e[0;32m\]\u\[\e[0m\]:\[\e[1;34m\]$WD \[\e[0;37m\]"
+pre_git="\n\[\033[G\]\[\e[0;32m\]\u\[\e[0m\]:\[\e[1;34m\]$WD \[\e[0;37m\]"
 
 # separators
-for((i=${#pre_git}-42; i< ($COLUMNS -8 + 10  - 1); i++)) do
+for((i=${#pre_git}-44; i< ($COLUMNS -8 + 10  - 1); i++)) do
 	pre_git="$pre_git─"
 done
 
